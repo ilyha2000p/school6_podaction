@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Аворизация админа</title>
+
+	<meta charset="utf-8">
+</head>
+<body>
+	<h3>{{h3_text}}</h3>
+
+	<form method="POST" action="/admin" id="password_form">
+		<input type="password" name="password">
+	</form>
+
+	<button id="enter_button">Войти</button>
+
+	<script type="text/javascript">
+		var form = document.body.querySelector('#password_form');
+		var enter_button = document.body.querySelector('#enter_button');
+
+		enter_button.onclick = function(){
+			form.submit();
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+.timetable
+    {
+        margin-top: 100px;
+    }
+
+
+
+
+
+
+
+
+    .timetable_header
+    {
+        text-align: center;
+
+        font-size: 25px;
+        font-weight: bold;
+
+        color: #004E8B;
+
+		margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+
+
+
+
+
+
+    .timetable_table
+    {
+        border: 2px solid silver;
+
+        font-size: 15px;
+
+        margin: 0PX auto 0px auto;
+    }
+    .timetable_table td
+    {
+        width: 136px;
+
+        text-align: center;
+
+        border-top: 2px solid silver;
+        border-left: 2px solid silver; 
+    }

@@ -1,0 +1,394 @@
+@font-face 
+{
+	font-family: "Century Gothic";
+	src: url("fonts/GOTHIC.TTF");
+}
+@font-face 
+{
+	font-family: "Century Gothic";
+	src: url("fonts/GOTHICB.TTF");
+	font-weight: bold;
+}
+
+
+
+
+*
+{
+	box-sizing: border-box;
+	position: relative;
+	z-index: 0;
+	font-family: 'Century Gothic';
+	color: #32454C;
+}
+
+
+
+
+
+
+
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+
+	background-image: url(images/bg5_2.png);
+}
+
+
+
+
+
+
+
+
+
+
+.button
+{
+	transition: font-size 0.5s, background-color 0.5s;
+
+	cursor: pointer;
+
+	font-family: "Century Gothic";
+	text-align: center;
+
+	background-color: #004E8B;
+	color: white !important;
+}
+.button:hover
+{
+	transition: background-color 0.5s;
+
+	background-color: #005CA4;
+}
+
+
+
+
+
+
+
+
+
+.section_header
+{
+	width: 800px;
+	border-bottom: 5px solid #004E8B;
+	margin: 0px auto 0px auto;
+
+	font-weight: 900;
+	font-size: 30px;
+	text-align: center;
+	color: #32454C;
+}
+
+
+
+
+
+
+
+.header_of_list
+{
+	margin: 0px auto 0px auto;
+
+	text-align: center;
+
+	font-weight: bold;
+	font-size: 20px;
+
+	color: #004E8B;
+}
+
+
+
+
+
+
+
+.main_page_list_style
+{
+	font-size: 19px;
+
+	color:  #32454C;
+}
+.main_page_list_style ul li
+{
+	color: #004E8B;
+}
+
+
+
+
+
+
+
+#to_top_button 
+{
+	width:50px;
+	height: 50px;
+	position:fixed;
+	bottom:10px; /* отступ кнопки от нижнего края страницы*/
+	right:10px;
+	cursor:pointer;
+	display:none;
+	z-index:3;
+}
+
+
+header
+{
+	min-width: 1200px;
+	width: 100%; 
+	height: 175px; 
+
+	margin-left: auto; 
+	margin-right: auto; 
+
+	padding: 10px 0px 0px 0px;
+	border-bottom: 6px solid #32454C; 
+
+	background-color: white;
+	background-image: url(images/bg02.png), url(images/bg02.png), url(images/bg01.png);
+	background-size: 100%, 100%, auto;
+
+    -webkit-box-shadow: 0px 0px 167px 121px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 167px 121px rgba(255,255,255,1);
+    box-shadow: 0px 0px 167px 121px rgba(255,255,255,1);
+}
+
+#header_conteiner
+{
+	width: 1200px;
+	height: 100%;
+	margin: 0px auto 0px auto;
+	padding: 0px 0px 0px 10px;
+}
+#header_images
+{
+	width: 1000px;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+#site_name_div
+{
+	width: 550px;
+	float: left;
+	margin: 0px 0px 0px 10px;
+	cursor: pointer;
+}
+#site_name_div a
+{
+	text-decoration: none !important;
+}
+
+
+
+
+
+
+
+#main
+{	z-index: 2;
+	top: -25px;
+	min-height: calc(100vh - 350px);
+
+	width: 1200px;
+	height: 100%;
+
+	margin-left: auto;
+	margin-right: auto; 
+
+	background-color: white;
+	background-image: url(images/bg_texture4.png);
+
+	-webkit-box-shadow: 0px 0px 18px -3px rgba(89,89,89,1);
+	-moz-box-shadow: 0px 0px 18px -3px rgba(89,89,89,1);
+	box-shadow: 0px 0px 18px -3px rgba(89,89,89,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+#content
+{
+	padding: 20px 100px 100px 100px;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+#menu
+{	
+	width: 100%;
+	height: 50px;
+
+	background-color: #004E8B;
+}
+.sections
+{
+	transition: font-size 0.5s, background-color 0.5s;
+
+	float: left;
+
+	cursor: pointer;
+
+	height: 50px;
+	width: 171px;
+
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: 100;
+	text-align: center;
+
+	padding-top: 15px;
+
+	background-color: #004E8B;
+	color: rgba(256, 256, 256, 0.95);
+}
+.sections:hover
+{
+	transition: font-size 0.5s, background-color 0.5s, color 0.5s;
+
+	background-color: #005CA4;
+
+	color: white;
+}
+
+
+
+
+
+
+
+
+#about_us
+{
+	width: 650px;
+
+	float: left;
+}
+#about_us_articles
+{
+	float: left;
+
+	width: 300px; 
+
+	color: #32454C;
+
+	font-size: 13px;
+	font-weight: bold;
+}
+#about_us_values
+{
+	float: left;
+
+	width: 350px;
+
+	color: #32454C;
+
+	font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+#useful_links
+{
+	width: 340px;
+	height: 216px;
+
+	float: left;
+
+	color: #32454C;
+
+	font-size: 13px;
+}
+#useful_links ul li
+{
+	transition: padding-left 0.3s, color 0.3s;
+
+	padding-left: 0px;
+	color: #32454C !important;
+
+	font-weight: bold;
+}
+#useful_links ul li:hover
+{
+	transition: padding-left 0.3s, color 0.3s;
+
+	padding-left: 10px;
+	color: #004E8B !important;
+}
+#useful_links ul li p a
+{
+	text-decoration: none !important;
+	color: #32454C !important;
+}
+#useful_links ul li p a:visited
+{
+	color: #32454C !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer
+{
+	width: 1200px; 
+	height: 300px; 
+
+	top: -25px;
+
+	margin: 0px auto 50px auto;
+
+	padding: 30px 0px 0px 100px;
+
+	border-top: 8px solid #004E8B;
+	border-bottom: 4px solid #eeeeee;
+
+	background-color: white;
+
+	font-family: 'Century Gothic';
+
+	background-image: url(images/bg03.png), url(images/bg03.png), url(images/bg01.png);
+	background-size: 100%, 100%, auto;
+
+	-webkit-box-shadow: 0px 0px 18px -3px rgba(89,89,89,1);
+	-moz-box-shadow: 0px 0px 18px -3px rgba(89,89,89,1);
+	box-shadow: 0px 0px 18px -3px rgba(89,89,89,1);
+}
+
+
+

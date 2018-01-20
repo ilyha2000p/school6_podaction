@@ -1,0 +1,24 @@
+.header_of_list
+    {
+        margin: 70px auto 0px auto;
+    }
+
+    .list_name
+    {
+        font-size: 20px;
+
+        text-align: center;
+        font-weight: bold;
+
+        margin: 50px auto 10px auto;
+    }
+
+    .highlight{
+        font-style: italic;
+        text-decoration: underline;
+    }
+
+    .highlight_bolder{
+        font-weight: bold;
+        color: #004E8B;
+    }

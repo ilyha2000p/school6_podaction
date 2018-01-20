@@ -1,0 +1,60 @@
+article
+{
+	width: 900px;
+	max-height: 300px;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+
+	padding: 20px;
+
+	border-top: 2px solid #CFD3D4;
+
+	color: #32454C;
+}
+#article_name
+{
+	color: #004E8B;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#article_text
+{
+}
+#article_text p
+{
+	text-indent: 20px;
+}
+.information_about_article
+{
+	height: 25px;
+	width: 760px;
+
+	margin-top: 20px;
+}
+.date_of_article
+{
+	font-size: 13px;
+	color: #CFD3D4;
+
+	width: 150px;
+
+	float: left;
+}
+.button
+{
+	width: 120px;
+	height: 25px;
+
+	font-size: 15px;
+
+	padding: 1px;
+	float: left;
+
+	left: 590px;
+}
+.button span
+{
+	color: white !important;
+}

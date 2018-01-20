@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>news_admin</title>
+
+	<style type="text/css">
+		#article_name
+		{
+			font-weight: bold;
+		}
+		#edit
+		{
+			margin-left: 50px;
+		}
+	</style>
+
+	<meta charset="utf-8">
+</head>
+<body>
+	<form method="GET" action="/open_add_article_page">
+		<a href="/open_add_article_page"><button>Добавить статью</button></a>
+	</form>
+
+	<ul id="articles_list_ul">
+
+		{{#each values}}
+		<li id="{{id}}">
+			<div>
+				<span id="article_name">
+					{{article_name}}
+				</span>
+
+				<br>
+
+				<p id="data"><span>Добавлено: </span><span id="dd">{{dd}}</span>.<span id="mm">{{mm}}</span>.<span id="yyyy">{{yyyy}}</span></p>
+
+
+				<form method='POST' action="/open_edit_article_page">
+					<input type="hidden" name="id_for_edit" value="{{id}}">
+					<a href="/open_edit_article_page"><button>РЕДАКТИРОВАТЬ</button></a>
+				</form>
+
+
+				<form method='POST' action="/remove_article">
+					<input type="hidden" name="id_for_remove" value="{{id}}">
+					<a href="/remove_article"><button>УДАЛИТЬ</button></a>
+				</form>
+			</div>
+
+			<br>
+		</li>
+		{{/each}}
+		
+	</ul>
+</body>
+</html>

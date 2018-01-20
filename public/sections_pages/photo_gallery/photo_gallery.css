@@ -1,0 +1,57 @@
+#folders
+{
+	margin: 50px 0px 0px 0px;
+
+	clear: both;
+}
+
+
+
+
+
+
+.folder_div
+{
+	width: 245px;
+	height: 230px;
+
+	/*border: 1px solid black;*/
+
+	padding: 10px 10px 10px 10px;
+
+	margin: 20px 0px 20px 0px;
+
+	display: inline-block;
+	vertical-align: middle;
+
+	cursor: pointer;
+
+	transition: background-color 0.5s, border-radius 0.5s;
+}
+.folder_div:hover
+{
+	transition: background-color 0.5s, border-radius 0.5s;
+	
+	background-color: #E9EEF2;
+	border-radius: 3px;
+}
+.img_folder_div
+{
+	width: 170px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	cursor: pointer;
+}
+.folder_text
+{
+	width: 220px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	font-size: 12px;
+
+	text-align: center;
+}

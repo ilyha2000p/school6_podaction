@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+
+	<style type="text/css">
+		#article_name
+		{
+			width: 1200px;
+		}
+		#article_text
+		{
+		}
+		#dd, #mm, #yyyy
+		{
+			width: 50px;
+		}
+	</style>
+
+	<meta charset="utf-8">
+</head>
+<body>
+	<form method="POST" action={{url_query}}>
+		<input type="hidden" name="article_id" value="{{article_id}}">
+
+		<p>Название статьи:</p>
+		<input type="text" name="article_name" id="article_name" value="{{article_name}}">
+
+		<p>Статья:</p>
+		<textarea name="article_text" id="article_text">{{article_text}}</textarea>
+
+		<br>
+		<br>
+
+		<span>День:</span>
+		<input type="text" name="dd" id="dd" value={{dd}}>
+		<span>Месяц:</span>
+		<input type="text" name="mm" id="mm" value={{mm}}>
+		<span>Год:</span>
+		<input type="text" name="yyyy" id="yyyy" value={{yyyy}}>
+
+		<br>
+		<br>
+
+		<input type="submit" name="send" value="ОК">
+	</form>
+</body>
+</html>

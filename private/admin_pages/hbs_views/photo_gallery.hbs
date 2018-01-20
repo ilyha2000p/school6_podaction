@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Сайт школы-гимназии №6</title>
+
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="/shared_files/tamplate.css">
+	<link rel="shortcut icon" type="image/x-icon" href="/shared_files/images/favicon_six.png">
+
+	<link rel="stylesheet" type="text/css" href="/sections_pages/photo_gallery/photo_gallery.css">
+</head>
+<body>
+	<header>
+		<div id="header_conteiner">
+			<a href="/index.html"><img src="/shared_files/images/book.png" style="height: 125px; cursor: pointer; float: left;"></a>
+			<div id="site_name_div">
+				<a href="/index.html"><h1 style="margin: 0px; font-size: 33px;">
+					ОФИЦИАЛЬНЫЙ САЙТ <br> СРЕДНЕЙ ШКОЛЫ-ГИМНАЗИИ №6 <br> г.КАРА-БАЛТА
+				</h1></a>
+			</div>		
+			<img src="/shared_files/images/gerb.png" style="height: 125px; margin: 0px 30px 0px 110px;">
+			<img src="/shared_files/images/flag.png" style="height: 125px;">
+		</div>		
+	</header>
+
+
+	<div id="main">
+		<div id="menu">
+			<a href="/index.html"><div class="sections">ГЛАВНАЯ</div></a>
+			<form method="GET" action="/news" id="news_button_form">
+				<div class="sections">НОВОСТИ ШКОЛЫ</div>
+			</form>
+			<a href="sections_pages/timetable/timetable.html"><div class="sections">РАСПИСАНИЕ</div></a>
+			<form method="GET" action="/gallery" id="gallery_button_form">
+				<div class="sections">ФОТОГАЛЕРЕЯ</div>
+			</form>
+			<a href="/sections_pages/school_collective/school_collective.html"><div class="sections" style="padding-top: 5px;">ШКОЛЬНЫЙ КОЛЛЕКТИВ</div></a>
+			<a href="/sections_pages/children_and_parents/children_and_parents.html"><div class="sections" style="padding-top: 5px;">ДЕТЯМ И <br> РОДИТЕЛЯМ</div></a>
+			<a href="/sections_pages/we_are_proud_of_you/we_are_proud_of_you.html"><div class="sections" style="width: 174px; padding-top: 5px;">МЫ ГОРДИМСЯ <br> ВАМИ</div></a>
+		</div>
+
+		<div id="content">
+			<div class="section_header">
+				ФОТОГАЛЕРЕЯ
+			</div>
+
+
+			<div id="folders">
+				{{#each values}}
+					<div class="folder_div">
+						<div class="img_folder_div">
+							<img src="/sections_pages/photo_gallery/images/folder.png" width="170px">
+						</div>
+
+						<div class="folder_text">
+							<span>{{folder_name}}</span>
+						</div>	
+
+						<form method="POST" action="/opened_folder">
+							<input type="hidden" name="folder_name" value="{{folder_name}}">
+						</form>
+					</div>	
+				{{/each}}
+			</div>
+
+		</div>	
+	</div>
+
+	<footer>
+		<div id="about_us">
+			<span style="font-size: 20px; font-weight: bold; color: #004E8B; width: 650px; float: left; margin-bottom: 10px;">КАК С НАМИ СВЯЗАТЬСЯ:</span>
+
+			<div id="about_us_articles">
+				<p>Директор:</p>
+				<p style="margin-top:45px;">Адрес:</p>
+				<p>Почтовый индекс:</p>
+				<p>Контактный телефон:</p>
+				<p>Электронный адрес:</p>
+			</div>
+
+			<div id="about_us_values">
+				<p style="margin-bottom: 0px;">Дебелая Елена Николаевна</p>
+				<p style="margin: 0px;">+996772432902</p>
+				<p style="margin: 0px;">elena30@rambler.ru</p>
+
+				<p>г.Кара-Балта, ул.Ленина 10</p>
+
+				<p>724411</p>
+
+				<p>03133-33292</p>
+
+				<p>jailroo6@mail.ru</p>
+			</div>
+		</div>
+
+		<div id="useful_links">
+			<span style="font-size: 20px; font-weight: bold; color: #004E8B; width: 300px; float: left; margin-bottom: 10px;">ПОЛЕЗНЫЕ ССЫЛКИ:</span>
+
+			<br>
+			<br>
+
+			<ul style="padding-left: 16px;">
+				<li><p><a href="http://kbcity.kg/">Городской портал г.Кара-Балта</a></p></li>
+				<li><p><a href="http://edu.gov.kg/">Сайт министерства образования и науки Кыргызской Республики</a></p></li>
+				<li><p><a href="http://www.gov.kg/">Сайт правительства Кыргызской Республики</a></p></li>
+			</ul>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="/shared_files/plugins/to_top_button/jquery-3.2.1.min.js"></script>
+	<div id="to_top_button"><img src="/shared_files/plugins/to_top_button/to_up_button4.png" width="50px"></div>
+	<script type="text/javascript" src="/shared_files/plugins/to_top_button/to_top_button.js"></script>
+
+	<script type="text/javascript" src="/shared_files/js/send_request.js"></script>
+
+	<script type="text/javascript">
+		var folders_div = document.body.querySelector('#folders');
+
+		var folders_list = folders_div.getElementsByClassName('folder_div');
+
+		for(var i=0; i<folders_list.length; i++)
+		{
+			folders_list[i].onclick = function(){
+				var folder_form = this.children[2];
+
+				//alert(folder_form.innerHTML);
+				folder_form.submit();
+			}
+		}
+	</script>
+</body>
+</html>
